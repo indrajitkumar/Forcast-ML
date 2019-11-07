@@ -2,11 +2,9 @@ import pickle
 
 from sklearn.externals import joblib
 
-# predictive_model = joblib.load('ml_code/final_prediction.pkl', 'rb')
 classifier_model = joblib.load('ml_code/clustering_model.pkl')
 logistic_regression_model = joblib.load('ml_code/logistic_regression_model.pkl')
 linear_regression_model = joblib.load('ml_code/linear_regression_model.pkl')
-
 predictivereg = pickle.load(open("ml_code/final_prediction.pkl", "rb"))
 # predictivereg = pickle.loads(predictive_model)
 clf = pickle.loads(classifier_model)

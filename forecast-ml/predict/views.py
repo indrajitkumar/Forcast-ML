@@ -25,10 +25,10 @@ def operate_function(product_detail):
 
 
 def operate_function_for_steel(product_detail1):
-    X_Minimum = product_detail1.X_Minimum
-    X_Maximum = product_detail1.X_Maximum
-    Y_Minimum = product_detail1.Y_Minimum
-    Y_Maximum = product_detail1.Y_Maximum
+    X_Minimum = 4#product_detail1.X_Minimum
+    X_Maximum = 6#product_detail1.X_Maximum
+    Y_Minimum = 5#product_detail1.Y_Minimum
+    Y_Maximum = 8#product_detail1.Y_Maximum
     Pixels_Areas = product_detail1.Pixels_Areas
     X_Perimeter = product_detail1.X_Perimeter
     Y_Perimeter = product_detail1.Y_Perimeter

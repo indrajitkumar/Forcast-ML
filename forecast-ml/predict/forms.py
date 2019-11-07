@@ -7,10 +7,6 @@ class SteelProductForm(forms.ModelForm):
     class Meta:
         model = SteelProduct
         fields = (
-            'X_Minimum',
-            'X_Maximum',
-            'Y_Minimum',
-            'Y_Maximum',
             'Pixels_Areas',
             'X_Perimeter',
             'Y_Perimeter',
@@ -29,8 +25,8 @@ class SteelProductForm(forms.ModelForm):
             'Edges_Y_Index',
             'Outside_Global_Index',
             'LogOfAreas',
-            'Log_X_Index',
-            'Log_Y_Index',
+            # 'Log_X_Index',
+            # 'Log_Y_Index',
             'Orientation_Index',
             'Luminosity_Index',
             'SigmoidOfAreas'
@@ -38,10 +34,10 @@ class SteelProductForm(forms.ModelForm):
 
     def save(self, commit=True):
         product = super(SteelProductForm, self).save(commit=False)
-        product.X_Minimum = self.cleaned_data['X_Minimum']
-        product.X_Maximum = self.cleaned_data['X_Maximum']
-        product.Y_Minimum = self.cleaned_data['Y_Minimum']
-        product.Y_Maximum = self.cleaned_data['Y_Maximum']
+        product.X_Minimum = 1  # self.cleaned_data['X_Minimum']
+        product.X_Maximum = 5  # self.cleaned_data['X_Maximum']
+        product.Y_Minimum = 6  # self.cleaned_data['Y_Minimum']
+        product.Y_Maximum = 2  # self.cleaned_data['Y_Maximum']
         product.Pixels_Areas = self.cleaned_data['Pixels_Areas']
         product.X_Perimeter = self.cleaned_data['X_Perimeter']
         product.Y_Perimeter = self.cleaned_data['Y_Perimeter']
@@ -60,8 +56,8 @@ class SteelProductForm(forms.ModelForm):
         product.Edges_Y_Index = self.cleaned_data['Edges_Y_Index']
         product.Outside_Global_Index = self.cleaned_data['Outside_Global_Index']
         product.LogOfAreas = self.cleaned_data['LogOfAreas']
-        product.Log_X_Index = self.cleaned_data['Log_X_Index']
-        product.Log_Y_Index = self.cleaned_data['Log_Y_Index']
+        product.Log_X_Index = 34  # self.cleaned_data['Log_X_Index']
+        product.Log_Y_Index = 45  # self.cleaned_data['Log_Y_Index']
         product.Orientation_Index = self.cleaned_data['Orientation_Index']
         product.Luminosity_Index = self.cleaned_data['Luminosity_Index']
         product.SigmoidOfAreas = self.cleaned_data['SigmoidOfAreas']
